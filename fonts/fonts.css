@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'SignPainter';
+    src: url('signpainter.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('Gilroy-Regular.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tinos';
+    src: url('Tinos-Regular.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+

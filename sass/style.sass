@@ -1,0 +1,398 @@
+$main-yellow: #EDAC40
+.yellow 
+    color: $main-yellow
+.text-align-right
+    text-align: right
+
+.text-align-center
+    text-align: center
+
+.button 
+    padding: 19px 29px
+    display: inline-block
+    background: $main-yellow
+    font-family: Tinos
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 23px
+    letter-spacing: 0.04em
+    text-transform: uppercase
+    color: #FFFFFF !important
+a 
+    color: inherit
+    text-transform: uppercase
+    &:hover 
+        color: inherit
+        text-decoration: none
+.button-tr 
+    padding: 10px 38px
+    background-color: transparent
+    border: 3px solid $main-yellow
+    box-sizing: border-box
+    border-radius: 100px
+    font-size: 16px
+    line-height: 19px
+    letter-spacing: 0.04em
+    text-transform: uppercase
+    color: $main-yellow
+    display: inline-block
+
+.controll 
+    display: flex
+    align-items: center
+    font-size: 16px
+    line-height: 19px
+    letter-spacing: 0.04em
+    .back, .next
+        width: 34px
+        height: 34px
+        border-radius: 50%
+        border: 2px solid #FFFFFF
+        background: url('../icons/arrow.svg') no-repeat center center
+        cursor: pointer
+        &:hover 
+            border: 2px solid $main-yellow
+    .next 
+        transform: scaleX(-1)
+        margin-left: 10px
+        margin-right: 25px
+    .count 
+        color: #E0E0E0
+h2
+    font-family: Tinos
+    font-style: normal
+    font-weight: normal
+    font-size: 35px
+    letter-spacing: 0.08em
+    text-transform: uppercase
+
+.sign-painter 
+    font-family: SignPainter !important
+    font-size: 25px !important
+    line-height: 104.8% !important
+    letter-spacing: 0.08em !important
+    color: $main-yellow
+
+.arrow-crcl 
+    color: $main-yellow
+    display: inline-block
+    position: relative
+    margin-right: 50px
+    letter-spacing: 0.04em
+    &::after
+        position: absolute
+        content: ''
+        width: 34px
+        height: 34px
+        border-radius: 50%
+        border: 3px solid $main-yellow
+        background: url('../icons/arrow-yell.svg') no-repeat center center
+        right: -50px
+        margin-top: -5px
+
+.arrow
+    color: $main-yellow
+    position: relative
+    display: inline-block
+    &::after
+        content: ''
+        position: absolute
+        width: 13px
+        height: 100%
+        background: url('../icons/arrow-yell.svg') no-repeat center center
+        right: calc( -13px - 15px )
+
+section
+    padding-bottom: 12rem
+    p 
+        font-family: Gilroy
+        font-style: normal
+        font-weight: 300
+        font-size: 16px
+        line-height: 18px
+        letter-spacing: 0.04em
+        margin-bottom: 25px
+
+    .title-line 
+        padding-bottom: 32px
+        margin-bottom: 58px
+        display: flex
+        justify-content: space-between
+        border-bottom: 1px solid #F1F1F1
+        p 
+            flex-basis: 710px
+    .row-content 
+        display: flex
+        justify-content: space-between
+        margin-bottom: 12rem
+        margin-top: 7.5rem
+        &:last-child
+            margin-bottom: 0
+    .item-img 
+        display: block
+        position: relative
+        flex-grow: 1
+        &::before
+            content: ''
+            display: block
+            padding-top: 50%
+        img 
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center
+    .item-text
+        margin-left: 50px
+        width: 44%
+        h3 
+            font-family: Tinos
+            font-weight: normal
+            font-size: 30px
+            line-height: 34px
+            letter-spacing: 0.04em
+            margin-bottom: 2.5rem
+    .reverse 
+        .item-img 
+            order: 2
+        .item-text
+            margin-left: 0px
+            margin-right: 50px
+
+.c-container 
+    position: absolute
+    height: 100%
+    width: 100%
+    z-index: -1
+    .item-img 
+        display: block
+        position: relative
+        height: 100vh
+        &::before
+            content: ''
+            display: block
+            padding-top: 50%
+        img 
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center
+
+.header
+    position: relative
+    background:  rgba(0, 0, 0, 0.24)
+    font-family: 'Gilroy'
+    background: url('../img/DSC_3584.jpg') no-repeat center center
+    background-size: cover
+    color: #fff
+    padding-bottom: 120px
+    height: 100vh
+
+    display: flex
+    flex-direction: column
+    .navbar
+        border: 1px solid rgba(255, 255, 255, 0.2)
+        padding: 0 15rem 0 13rem
+        height: 7rem
+        flex-wrap: nowrap
+        &-brand
+            font-family: 'SignPainter'
+            font-size: 30px
+            line-height: 29px
+        .nav 
+           flex-grow: 1
+           margin-right: 6rem
+    .container 
+        flex-grow: 1
+    &-content 
+        font-family: Tinos
+        display: flex
+        flex-direction: column
+        height: 100%
+        .title
+            flex-grow: 1
+            display: flex
+            flex-direction: column
+            justify-content: center
+        h3
+            font-size: 35px
+            line-height: 40px
+        h1 
+            font-size: 64px
+    .play 
+        display: inline-block
+        position: relative
+        font-family: Gilroy
+        font-size: 16px
+        line-height: 19px
+        letter-spacing: 0.04em
+        margin-top: 45px
+        &::after
+            position: absolute
+            content: ''
+            width: 50px
+            height: 50px
+            border: 3px solid #EDAC40
+            border-radius: 50%
+            box-sizing: border-box
+            background: url('../icons/play.svg')no-repeat 60% center
+            right: calc( -50px - 29px )
+            top: -50%
+            margin-top: -5px
+            cursor: pointer
+
+.about 
+    padding-top: 100px
+    .nav 
+        border-bottom: 1px solid #DADADA
+        li 
+            flex-grow: 1
+            text-align: center
+            a 
+                display: block
+                height: 100%
+                max-width: 100%
+                padding-bottom: 35px
+                font-size: 24px
+                line-height: 29px
+                letter-spacing: 0.04em
+                box-sizing: border-box
+                text-transform: none
+                border-bottom: 3px solid transparent
+                &:hover, 
+                    color: $main-yellow
+                    border-bottom: 3px solid $main-yellow
+            .active 
+                font-weight: 500
+                color: $main-yellow
+                border-bottom: 3px solid $main-yellow
+.visa
+    padding: 68px 0
+    background: #FCFCFC
+    margin-bottom: 8rem
+    &-row 
+        display: flex
+        justify-content: space-between
+        h3 
+            font-family: Tinos
+            font-size: 30px
+            line-height: 34px
+            letter-spacing: 0.04em
+        p 
+            max-width: 850px
+        .button-tr 
+            margin-top: 1rem
+            position: relative
+            padding: 10px 70px 10px 28px
+            &::after
+                content: ''
+                position: absolute
+                width: 13px
+                height: 100%
+                background: url('../icons/arrow-yell.svg') no-repeat center center
+                top: 0
+                right: 35px 
+            &:hover 
+                color: $main-yellow
+
+.c-controll
+    display: flex
+    justify-content: center
+    .back, .next
+        width: 61px
+        height: 61px
+        border-radius: 50%
+        border: 3px solid #E3E3E3
+        cursor: pointer
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            width: 40%
+            height: 40%
+            background: url('../icons/arrow-gr.svg') no-repeat center center
+            background-size: contain
+            top: 50%
+            margin-top: -20%
+            right: 50%
+            margin-right: -20%
+        &:hover 
+            border: 2px solid $main-yellow
+    .next
+        transform: scaleX(-1)
+        margin-left: 12px
+        &:hover 
+            &::after  
+                background: url('../icons/arrow-yell.svg') no-repeat center center
+                background-size: contain
+                transform: scaleX(-1)
+    .back
+        transform: scaleX(1)
+        margin-left: 120px
+        &:hover 
+            &::after  
+                background: url('../icons/arrow-yell.svg') no-repeat center center
+                background-size: contain
+                transform: scaleX(-1)
+
+.calendar 
+    .row-content
+        margin-bottom: 5rem
+    .item-text 
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        h3 
+            margin-bottom: 2rem
+                
+.gallery 
+    .back, .next 
+        width: 34px
+        height: 34px
+    &-list 
+        height: 100vh
+        ul
+            list-style: none
+            padding: 0
+            li 
+                display: block
+                position: relative
+                flex-grow: 1
+                &::before
+                    content: ''
+                    display: block
+                    padding-top: 50%
+                img 
+                    position: absolute
+                    top: 0
+                    right: 0
+                    bottom: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                    object-position: center
+.contact
+    .row-content
+        margin-bottom: 20px
+        .item-text 
+            a 
+                margin-right: 30px
+        .button 
+            margin: 0 auto
+
+                
+        
+
+        
+        
