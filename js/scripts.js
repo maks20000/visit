@@ -1,36 +1,92 @@
+$(document).ready(function(){
+    $('.gallery-list').slick({
+        arrows: true,
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        prevArrow: $("#gallery_back"),
+        nextArrow: $("#gallery_next"),
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ]
+    });
 
+    $('.know-slider-container').slick({
+        prevArrow: $("#know_back"),
+        nextArrow: $("#know_next")
+    });
 
-Vue.component ("slide", {
-    template: '<carousel :data=getTemplate()></carousel>',
-    data () {
-        return {
+    $('.calendar-slider-container').slick({
+        prevArrow: $("#calendar_back"),
+        nextArrow: $("#calendar_next")
+    });
 
-        }
-    },
-    props: {
-        items: []
-    },
+    $("#play").click(function() {
+        var popap = $(".popup").show();
+        popap.html('<video src="video/GRADED_NESTED_FILM04.mp4" controls autoplay="false" ></video>');
+        $("video").trigger('play');
+    })
 
-    methods: {
-        getTemplate () {
-            var result = [];
-            this.items.forEach(element => {
-                result.push('<div class="item-img"><img src='+element+' alt=""></div>');
-            });
-            return result;
-        }
+    $(".call").click(function () {
+        $(".popup_form").show()
+    })
+
+    $(".popup_form").click(function() {
+        $(this).hide();
+    })
+
+    $(".popup").click(function() {
+        $("video").trigger('pause');
+        $(this).html("");
+        $(this).hide();
+    })
+
+    if ($(window).scrollTop()>10) {
+        white_header();
     }
 
-})
 
-var app = new Vue({
-    el: '#app',
-    data: {
-        message: 'Привет, Vue!',
-        show: false,
-        data: [
-            "test1",
-            "test2"
-        ]
-    },
-})
+    $(window).scroll(function() {
+      if ($(window).scrollTop()>10) {
+          white_header();
+      }
+      if ($(window).scrollTop()<=10) {
+          var v = $(".navbar");
+          reset_header();
+      }
+    });
+
+
+    function white_header () {
+        var nav = $(".navbar");
+        nav.addClass("nav-white")
+    }
+
+    function reset_header () {
+        var nav = $(".navbar");
+        nav.removeClass("nav-white")
+    }
+
+    let hide_menu = $(".hide-menu");
+    hide_menu.on('click',function() {
+      var target = $(this).attr("target");
+      $("#"+target).toggle();
+    })
+});

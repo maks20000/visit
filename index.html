@@ -4,219 +4,363 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Document</title>
 </head>
 <body>
-    <div id="app">
-        <header class="header">
-            <nav class="navbar">
-                <ul class="nav justify-content-between">
-                        <li><a href="/" class="navbar-brand">VISIT SAUDI</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">О стране</a></li>
+    <div class="popup_form">
+        <div class="form">
+            <input type="text" placeholder="Ваше имя">
+            <input type="text" placeholder="Ваш телефон">
+            <a class="button" href="#">Заказать звонок</a>
+        </div>
+    </div>  
+    <div class="popup"></div> 
+    <header class="header">
+        <nav class="navbar">
+            <div class ="hide-menu" target="nav-menu">
+                <span class='line-up'></span>
+                <span class='line-mid'></span>
+                <span class='line-down'></span>
+            </div>
+            <div class="navbar-container">
+                <a href="/" class="navbar-brand">VISIT SAUDI</a>
+                <ul id="nav-menu" class="nav justify-content-between">
+                        <li class="nav-item"><a class="nav-link" href="#about">О стране</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Чем заняться</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Календарь</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Календарь событий</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">ГАЛЕРЕЯ</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">ГАЛЕРЕЯ</a></li>
                 </ul>
-                <a href="#" class="button-tr">ЗАКАЗАТЬ ЗВОНОК</a>
-            </nav>
-            <div class="container">
-                <div class="header-content">
-                    <div class="title">
-                        <h3>ОТКРОЙТЕ ДЛЯ СЕБЯ</h3>
-                        <h1>САУДОВСКУЮ АРАВИЮ</h1>
-                        <div>
-                            <span class="play">Смотреть видео</span>
-                        </div>
-                    </div>
-                    <div class="controll">
-                        <div class="back"></div>
-                        <div class="next"></div>
-                        <div class="item-count">
-                            <span class="num">01 </span>
-                            <span class="count">/ 04</span>
-                        </div>
-                    </div>
-                </div>
+                <a href="#" class="button-tr call">ЗАКАЗАТЬ ЗВОНОК</a>
             </div>
-        </header>
-        <section class="about">
-            <div class="container">
-                <div class="title-line">
-                    <h2>О стране</h2>
-                    <p>Все самое важное, что вам нужно знать о Саудовской Аравии — это великая история,а также полезная информация о климате и культуре после прибытия.</p>
-                </div>
-                <ul class="nav">
-                    <li><a class="active" href="#">История и География</a></li>
-                    <li><a href="#">Климат и Сезоны</a></li>
-                    <li><a href="#">Культура и Язык</a></li>
-                </ul>
-                <div class="row-content">
-                    <div class="item-img">
-                        <img src="img/hist.jpg" alt="hist">
-                    </div>
-                    <div class="item-text">
-                        <h3>История и География</h3>
-                        <p>Саудовская Аравия расположена в Юго-Западной Азии и является одной из крупнейших стран данного региона. 
-                            Саудовская Аравия граничит с Персидским заливом и Красным морем. Саудовская Аравия вследствие своего расположения 
-                            богата на нефтяные ресурсы и экспортирует их через Суэцкий канал, и Персидский залив. Королевство занимает 80 % всего 
-                            Аравийского полуострова.</p>
-                        <a class="arrow" href="#">Подробнее</a>
+        </nav>
+        <div class="container">
+            <div class="header-content">
+                <div class="title">
+                    <h3>ОТКРОЙТЕ ДЛЯ СЕБЯ</h3>
+                    <h1>САУДОВСКУЮ АРАВИЮ</h1>
+                    <div>
+                        <span id="play" class="play">Смотреть видео</span>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="what_todo">
-            <div class="container">
-                <div class="title-line">
-                    <h2>ЧЕМ ЗАНЯТЬСЯ</h2>
-                    <a class="arrow-crcl" href="#">ПОСМОТРЕТЬ ВСЁ</a>
-                </div>
-                <div class="row-content reverse">
-                    <div class="item-img">
-                        <img src="img/city.jpg" alt="hist">
-                    </div>
-                    <div class="item-text">
-                        <p class="sign-painter">Исследуйте достопримечательности исторического города</p>
-                        <h3>Города</h3>
-                        <p>Крупнейший город, столица королевства, его политический, культурный и научный центр — Эр-Рияд с населением более 7 млн человек. 
-                            Джидда — второй по величине город страны, её «экономическая столица», важнейший порт на Красном море. Мекка и Медина, 
-                            являясь одними из крупнейших городов страны, являются символами Саудовской Аравии и священными городами ислама</p>
-                        <a class="arrow" href="#">Подробнее</a>
-                    </div>
-                </div>
-
-                <div class="row-content">
-                    <div class="item-img">
-                        <img src="img/DSC_3584.jpg" alt="hist">
-                    </div>
-                    <div class="item-text">
-                        <p class="sign-painter">Посетите самые живописные пляжи Саудовской Аравии</p>
-                        <h3>Море</h3>
-                        <p>Саудовская Аравия расположена в Юго-Западной Азии и является одной из крупнейших стран данного региона. 
-                            Саудовская Аравия граничит с Персидским заливом и Красным морем. Саудовская Аравия вследствие своего расположения богата 
-                            на нефтяные ресурсы и экспортирует их через Суэцкий канал, и Персидский залив.</p>
-                        <a class="arrow" href="#">Подробнее</a>
-                    </div>
-                </div>
-
-                <div class="row-content reverse">
-                    <div class="item-img">
-                        <img src="img/DSC6917.jpg" alt="hist">
-                    </div>
-                    <div class="item-text">
-                        <p class="sign-painter">Узнайте о самых знаменитых горах Саудовской Аравии</p>
-                        <h3>Горы</h3>
-                        <p>На западе, параллельно побережью Красного моря, протянулись горы Хиджаз и Асир высотой 2500—3000 м, переходящие 
-                            в прибрежную низменность Тихама. В горах Асира рельеф меняется от горных вершин до крупных долин.</p>
-                        <a class="arrow" href="#">Подробнее</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="visa">
-            <div class="container">
-                <div class='visa-row'>
-                    <h3>ВИЗЫ</h3>
-                    <div class="text"><p>Новая визовая система является исторической вехой в открытии Саудовской Аравии для туризма. 
-                        Зарубежные посетители откроют для себя теплое гостеприимство саудовского народа: наше богатое наследие, яркую культуру и 
-                        разнообразные и захватывающие дух пейзажи, от гор Абха до пляжей Красного моря и зыбучих песков Пустого квартала. </p>
-                        <a class="button-tr" href="#">ПОЛУЧИТЬ ВИЗУ</a>
-                    </div> 
-                </div>
-            </div>
-        </section>
-        <section class="calendar">
-            <div class="container">
-                <div class="title-line">
-                    <h2>КАЛЕНДАРЬ СОБЫТИЙ</h2>
-                    <a class="arrow-crcl" href="#">ПОСМОТРЕТЬ ВСЁ</a>
-                </div>
-                <div class="row-content">
-                    <div class="item-img">
-                        <img src="img/DSC_9592-1.jpg" alt="hist">
-                    </div>
-                    <div class="item-text">
-                        <h3 class="yellow">Большая мечеть Мекки</h3>
-                        <p>В Мекке сооружён самый массивный в мире комплекс башен-небоскрёбов Абрадж аль-Бейт; 
-                            его самое высокое здание — Королевская башня — является третьим по высоте зданием в мире и 
-                            имеет самые большие и высотные в мире часы.</p>
-                        <div><a class="arrow" href="#">Посетить</a></div>
-                    </div>
-                </div>
-                <div class="c-controll">
-                    <a class="button" href="#">14 НОЯБРЯ 10.00</a>
+                <div class="controll">
                     <div class="back"></div>
                     <div class="next"></div>
+                    <div class="item-count">
+                        <span class="num">01 </span>
+                        <span class="count">/ 04</span>
+                    </div>
                 </div>
             </div>
-        </section>
-        <section class="know">
-            <div class="container">
-                <div class="title-line">
+        </div>
+    </header>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="title-line">
+                <h2>О стране</h2>
+                <p>Все самое важное, что вам нужно знать о Саудовской Аравии — это великая история,а также полезная информация о климате и культуре после прибытия.</p>
+            </div>
+            <ul class="nav" role="tablist">
+                <li><a class="active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">История и География</a></li>
+                <li><a id="profile-tab" data-toggle="tab" href="#block2" role="tab" aria-controls="block2" aria-selected="false">Климат и Сезоны</a></li>
+                <li><a id="contact-tab" data-toggle="tab" href="#block3" role="tab" aria-controls="block3" aria-selected="false">Культура и Язык</a></li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="row row-content">
+                        <div class="item-img col-sm-12 col-md-6">
+                            <img src="img/history.jpg" alt="hist">
+                        </div>
+                        <div class="item-text col-sm-12 col-md-5">
+                            <h3>История и География</h3>
+                            <p>Саудовская Аравия расположена в Юго-Западной Азии и является одной из крупнейших стран данного региона. 
+                                Саудовская Аравия граничит с Персидским заливом и Красным морем. Саудовская Аравия вследствие своего расположения 
+                                богата на нефтяные ресурсы и экспортирует их через Суэцкий канал, и Персидский залив. Королевство занимает 80 % всего 
+                                Аравийского полуострова.</p>
+                            <a class="arrow" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="block2" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="row row-content reverse">
+                        <div class="item-img col-sm-12 col-md-6">
+                            <img src="img/hist.jpg" alt="hist">
+                        </div>
+                        <div class="item-text col-sm-12 col-md-5">
+                            <h3>История и География</h3>
+                            <p>Саудовская Аравия расположена в Юго-Западной Азии и является одной из крупнейших стран данного региона. 
+                                Саудовская Аравия граничит с Персидским заливом и Красным морем. Саудовская Аравия вследствие своего расположения 
+                                богата на нефтяные ресурсы и экспортирует их через Суэцкий канал, и Персидский залив. Королевство занимает 80 % всего 
+                                Аравийского полуострова.</p>
+                            <a class="arrow" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="block3" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="row row-content">
+                        <div class="item-img col-sm-12 col-md-6">
+                            <img src="img/DSC6917.jpg" alt="hist">
+                        </div>
+                        <div class="item-text col-sm-12 col-md-5">
+                            <h3>История и География</h3>
+                            <p>Саудовская Аравия расположена в Юго-Западной Азии и является одной из крупнейших стран данного региона. 
+                                Саудовская Аравия граничит с Персидским заливом и Красным морем. Саудовская Аравия вследствие своего расположения 
+                                богата на нефтяные ресурсы и экспортирует их через Суэцкий канал, и Персидский залив. Королевство занимает 80 % всего 
+                                Аравийского полуострова.</p>
+                            <a class="arrow" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="what_todo">
+        <div class="container">
+            <div class="title-line">
+                <h2>ЧЕМ ЗАНЯТЬСЯ</h2>
+                <a class="arrow-crcl" href="#">ПОСМОТРЕТЬ ВСЁ</a>
+            </div>
+            <div class="row row-content reverse">
+                <div class="item-img col-sm-12 col-md-6">
+                    <img src="img/city1.jpg" alt="hist">
+                </div>
+                <div class="item-text col-sm-12 col-md-5">
+                    <p class="sign-painter">Исследуйте достопримечательности исторического города</p>
+                    <h3>Города</h3>
+                    <p>Крупнейший город, столица королевства, его политический, культурный и научный центр — Эр-Рияд с населением более 7 млн человек. 
+                        Джидда — второй по величине город страны, её «экономическая столица», важнейший порт на Красном море. Мекка и Медина, 
+                        являясь одними из крупнейших городов страны, являются символами Саудовской Аравии и священными городами ислама</p>
+                    <a class="arrow" href="#">Подробнее</a>
+                </div>
+            </div>
+
+            <div class="row row-content">
+                <div class="item-img col-sm-12 col-md-6">
+                    <img src="img/DSC_3584.jpg" alt="hist">
+                </div>
+                <div class="item-text col-sm-12 col-md-5">
+                    <p class="sign-painter">Посетите самые живописные пляжи Саудовской Аравии</p>
+                    <h3>Море</h3>
+                    <p>Саудовская Аравия расположена в Юго-Западной Азии и является одной из крупнейших стран данного региона. 
+                        Саудовская Аравия граничит с Персидским заливом и Красным морем. Саудовская Аравия вследствие своего расположения богата 
+                        на нефтяные ресурсы и экспортирует их через Суэцкий канал, и Персидский залив.</p>
+                    <a class="arrow" href="#">Подробнее</a>
+                </div>
+            </div>
+
+            <div class="row row-content reverse">
+                <div class="item-img col-sm-12 col-md-6">
+                    <img src="img/DSC6917.jpg" alt="hist">
+                </div>
+                <div class="item-text col-sm-12 col-md-5">
+                    <p class="sign-painter">Узнайте о самых знаменитых горах Саудовской Аравии</p>
+                    <h3>Горы</h3>
+                    <p>На западе, параллельно побережью Красного моря, протянулись горы Хиджаз и Асир высотой 2500—3000 м, переходящие 
+                        в прибрежную низменность Тихама. В горах Асира рельеф меняется от горных вершин до крупных долин.</p>
+                    <a class="arrow" href="#">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="visa">
+        <div class="container">
+            <div class='visa-row'>
+                <h3>ВИЗЫ</h3>
+                <div class="text"><p>Новая визовая система является исторической вехой в открытии Саудовской Аравии для туризма. 
+                    Зарубежные посетители откроют для себя теплое гостеприимство саудовского народа: наше богатое наследие, яркую культуру и 
+                    разнообразные и захватывающие дух пейзажи, от гор Абха до пляжей Красного моря и зыбучих песков Пустого квартала. </p>
+                    <a class="button-tr" href="#">ПОЛУЧИТЬ ВИЗУ</a>
+                </div> 
+            </div>
+        </div>
+    </section>
+    <section class="calendar">
+        <div class="container">
+            <div class="title-line">
+                <h2>КАЛЕНДАРЬ СОБЫТИЙ</h2>
+                <a class="arrow-crcl" href="#">ПОСМОТРЕТЬ ВСЁ</a>
+            </div>
+            <div class="calendar-slider-container">
+                <div>
+                    <div class="row row-content">
+                        <div class="item-img col-sm-12 col-md-6">
+                            <img src="img/DSC_9592-1.jpg" alt="hist">
+                        </div>
+                        <div class="item-text col-sm-12 col-md-5">
+                            <h3 class="yellow">Большая мечеть Мекки</h3>
+                            <p>В Мекке сооружён самый массивный в мире комплекс башен-небоскрёбов Абрадж аль-Бейт; 
+                                его самое высокое здание — Королевская башня — является третьим по высоте зданием в мире и 
+                                имеет самые большие и высотные в мире часы.</p>
+                            <div><a class="arrow" href="#">Посетить</a></div>
+                        </div>
+                    </div>
+                    <a class="button" href="#">14 НОЯБРЯ 10.00</a>
+                </div>
+
+                <div>
+                    <div class="row row-content">
+                        <div class="item-img col-sm-12 col-md-6">
+                            <img src="img/DSC_9592-1.jpg" alt="hist">
+                        </div>
+                        <div class="item-text col-sm-12 col-md-5">
+                            <h3 class="yellow">Большая мечеть Мекки</h3>
+                            <p>В Мекке сооружён самый массивный в мире комплекс башен-небоскрёбов Абрадж аль-Бейт; 
+                                его самое высокое здание — Королевская башня — является третьим по высоте зданием в мире и 
+                                имеет самые большие и высотные в мире часы.</p>
+                            <div><a class="arrow" href="#">Посетить</a></div>
+                        </div>
+                    </div>
+                    <a class="button" href="#">14 НОЯБРЯ 10.00</a>
+                </div>
+            </div>
+        </div>
+        <div class="c-controll">
+            <div id="calendar_back" class="back"></div>
+            <div id="calendar_next" class="next"></div>
+        </div>
+    </section>
+    <section class="know">
+            <div class="title-line">
+                <div class="container">
                     <h2>ПОЛЕЗНО ЗНАТЬ</h2>
                 </div>
-                <div class="row-content reverse">
-                    <div class="item-img">
-                        <img src="img/DSC_9592-1.jpg" alt="hist">
-                    </div>
-                    <div class="item-text">
-                        <p class="sign-painter">Испытайте невероятные эмоции от завораживающих видов</p>
-                        <h3 class="yellow">Вулканы Саудовской Аравии</h3>
-                        <p>Халлат-эль-Бадр — вулканический конус, часть лавового поля Харрат-эль-Увайрид. Расположен на Аравийском полуострове, 
-                            на территории нынешней Саудовской Аравии. Является частью вулканического поля Харрат Увайрид. 
-                            Некоторыми исследователями считается местом Синайского откровения ввиду того, что предположительно вулкан 
-                            Харрат Юварийд был активен в период Исхода. Среди сторонников гипотезы о том, что Синайское откровение могло произойти 
-                            на вулкане были Зигмунд Фрейд и И.Великовский.</p>
-                        <div><a class="arrow" href="#">УЗНАТЬ БОЛЬШЕ</a></div>
+            </div>
+        <div class="know-slider-container">
+            <div class="img" style="background-image: url('img/know.jpg')">
+                <div class="container">
+                    <div class="row-content reverse">
+                        <div class="item-text">
+                            <p class="sign-painter">Испытайте невероятные эмоции от завораживающих видов</p>
+                            <h3>Вулканы Саудовской Аравии</h3>
+                            <p>Халлат-эль-Бадр — вулканический конус, часть лавового поля Харрат-эль-Увайрид. Расположен на Аравийском полуострове, 
+                                на территории нынешней Саудовской Аравии. Является частью вулканического поля Харрат Увайрид. 
+                                Некоторыми исследователями считается местом Синайского откровения ввиду того, что предположительно вулкан 
+                                Харрат Юварийд был активен в период Исхода. Среди сторонников гипотезы о том, что Синайское откровение могло произойти 
+                                на вулкане были Зигмунд Фрейд и И.Великовский.</p>
+                            <div><a class="arrow" href="#">УЗНАТЬ БОЛЬШЕ</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="gallery">
-            <div class="container">
-                <div class="title-line">
-                    <h2>ГАЛЕРЕЯ</h2>
-                    <div class="c-controll">
-                        <div class="back"></div>
-                        <div class="next"></div>
+            <div class="img" style="background-image: url('img/city.jpg')">
+                <div class="container">
+                    <div class="row-content reverse">
+                        <div class="item-text">
+                            <p class="sign-painter">Испытайте невероятные эмоции от завораживающих видов</p>
+                            <h3>Вулканы Саудовской Аравии</h3>
+                            <p>Халлат-эль-Бадр — вулканический конус, часть лавового поля Харрат-эль-Увайрид. Расположен на Аравийском полуострове, 
+                                на территории нынешней Саудовской Аравии. Является частью вулканического поля Харрат Увайрид. 
+                                Некоторыми исследователями считается местом Синайского откровения ввиду того, что предположительно вулкан 
+                                Харрат Юварийд был активен в период Исхода. Среди сторонников гипотезы о том, что Синайское откровение могло произойти 
+                                на вулкане были Зигмунд Фрейд и И.Великовский.</p>
+                            <div><a class="arrow" href="#">УЗНАТЬ БОЛЬШЕ</a></div>
+                        </div>
                     </div>
                 </div>
-                <div class="gallery-list">
+            </div>
+        </div>
+        
+        <div class="c-controll">
+            <div id="know_back" class="back"></div>
+            <div id="know_next" class="next"></div>
+        </div>
+    </section>
+    <section class="gallery">
+        <div class="container">
+            <div class="title-line">
+                <h2>ГАЛЕРЕЯ</h2>
+                <div class="c-controll">
+                    <div id="gallery_back" class="back"></div>
+                    <div id="gallery_next" class="next"></div>
+                </div>
+            </div>
+            <div class="gallery-list">
+                <div class="gallery-item"><img src="img/city.jpg" alt=""></div>
+                <div class="gallery-item"><img src="img/city1.jpg" alt=""></div>
+                <div class="gallery-item"><img src="img/DSC6917.jpg" alt=""></div>
+                <div class="gallery-item"><img src="img/DSC_5541.jpg" alt=""></div>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="container">
+            <div class="title-line">
+                <h2>СВЯЖИТЕСЬ С НАМИ</h2>
+            </div>
+            <div class="row row-content">
+                <div class="item-img col-sm-12 col-md-6">
+                    <img src="img/DSC_9592-1.jpg" alt="hist">
+                </div>
+                <div class="item-text col-sm-12 col-md-5">
+                    <h3>Валюты и Платежи</h3>
+                    <p>Национальной валютой Саудовской Аравии является саудовский риал (символ: SAR), который подразделяется на 100 халал.</p>
+                    <p>Вы получите банкноты достоинством в пять риалов, десять риалов, 50 риалов, 100 риалов и 500 риалов; и монеты в 
+                        одном риале, два риала, 50 халала, 25 халала, 10 халала, пять халала и одна халала.</p>
+                    <h3>Как нас найти</h3>
+                    <p>Тут будет адрес и телефоны в две строчки</p>
+                    <div class="text-align-right"><a class="arrow-crcl" href="#">ПЕРЕЙТИ К САЙТУ</a></div>
+                </div>
+            </div>
+            <div class="text-align-center"><a href="#" class="button">22.848295, 45.725533</a></div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-item col-lg-3"> 
+                    <a href="#">О стране</a>
                     <ul>
-                        <li><img src="img/DSC_5541.jpg" alt=""></li>
+                        <li><a href="#">История и География</a></li>
+                        <li><a href="#">Культура и Язык</a></li>
+                        <li><a href="#">Климат и сезоны</a></li>
+                    </ul>
+                </div>
+                <div class="footer-item col-lg-3">
+                    <a href="#">Чем заняться</a>
+                    <ul>
+                        <li><a href="#">Города</a></li>
+                        <li><a href="#">Пляжи</a></li>
+                        <li><a href="#">Горы</a></li>
+                    </ul></div>
+                <div class="footer-item col-lg-3">
+                    <a href="#">Календарь событий</a>
+                    <ul>
+                        <li><a href="#">Экскурсия</a></li>
+                        <li><a href="#">Поездка</a></li>
+                    </ul>
+                </div>
+                <div class="footer-item col-lg-3">
+                    <a href="#">Следите за нами</a>
+                    <ul class="social">
+                        <li><a href="#"><img src="icons/twitter.png" alt="twitter"></a></li>
+                        <li><a href="#"><img src="icons/instagram.svg" alt="instagram"></a></li>
+                        <li><a href="#"><img src="icons/facebook.svg" alt="facebook"></a></li>
                     </ul>
                 </div>
             </div>
-        </section>
-        <section class="contact">
-            <div class="container">
-                <div class="title-line">
-                    <h2>СВЯЖИТЕСЬ С НАМИ</h2>
+            <div class="line-down">
+                <div>
+                    <a href="#" class="button-tr">Получить визу</a>
                 </div>
-                <div class="row-content">
-                    <div class="item-img">
-                        <img src="img/DSC_9592-1.jpg" alt="hist">
-                    </div>
-                    <div class="item-text">
-                        <h3>Валюты и Платежи</h3>
-                        <p>Национальной валютой Саудовской Аравии является саудовский риал (символ: SAR), который подразделяется на 100 халал.</p>
-                        <p>Вы получите банкноты достоинством в пять риалов, десять риалов, 50 риалов, 100 риалов и 500 риалов; и монеты в 
-                            одном риале, два риала, 50 халала, 25 халала, 10 халала, пять халала и одна халала.</p>
-                        <h3>Как нас найти</h3>
-                        <p>Тут будет адрес и телефоны в две строчки</p>
-                        <div class="text-align-right"><a class="arrow-crcl" href="#">ПЕРЕЙТИ К САЙТУ</a></div>
-                    </div>
-                </div>
-                <div class="text-align-center"><a href="#" class="button">22.848295, 45.725533</a></div>
+                <ul>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                    <li><a href="#">Связаться с нами</a></li>
+                </ul>
             </div>
-        </section>
-        <slide></slide>
-        <carousel :data="data"></carousel>
-    </div>
+        </div>
+    </footer>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/slick.min.js"></script>   
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
