@@ -45,6 +45,12 @@ $main-yellow: #EDAC40
     background: rgba(0,0,0, 0.4)
     transition: opacity 400ms ease-in
     z-index: 1000
+    .video 
+        position: relative
+        .close 
+            top: -29px
+            right: 10%
+
     video
         display: block
         width: 70%
@@ -57,22 +63,52 @@ $main-yellow: #EDAC40
         background: -webkit-linear-gradient(#fff, #999)
         background: -o-linear-gradient(#fff, #999)
     .form
-        width: 300px
-        padding: 15px
-        background: #E0E0E0
+        width: 260px
+        padding: 20px 15px
+        background: #fff
         text-align: center
         margin: 10% auto
         border-radius: 5px
         transition: all .5s ease-in
-        z-index: 1001
+        z-index: 2000
+        position: relative
         input
             width: 100%
             height: 50px
-            border: 1px solid #f1f1f1
+            border: 1px solid #000
             margin-bottom: 10px
             padding: 5px
         .button 
             width: 100%
+            padding: 15px 15px
+    .close 
+        width: 50px
+        height: 50px
+        border: 3px solid #ffffff
+        border-radius: 50%
+        position: absolute
+        top: -55px
+        right: -52px
+        &:after
+            content: ''
+            width: 20px
+            height: 3px
+            background: #fff
+            display: block
+            top: 44%
+            right: 27%
+            position: absolute
+            transform: rotateZ(45deg)
+        &:before
+            content: ''
+            width: 20px
+            height: 3px
+            background: #fff
+            display: block
+            top: 44%
+            right: 27%
+            position: absolute
+            transform: rotateZ(-45deg)
 
 
 
@@ -176,7 +212,7 @@ h2
         right: calc( -13px - 15px )
 
 section
-    padding-bottom: 12rem
+    padding-bottom: 70px
     p 
         font-family: Gilroy
         font-style: normal
@@ -188,7 +224,7 @@ section
 
     .title-line 
         padding-bottom: 32px
-        margin-bottom: 58px
+        margin-bottom: 70px
         display: flex
         justify-content: space-between
         border-bottom: 1px solid #F1F1F1
@@ -200,8 +236,7 @@ section
     .row-content 
         display: flex
         justify-content: space-between
-        margin-bottom: 12rem
-        margin-top: 7.5rem
+        margin-top: 92px
         &:last-child
             margin-bottom: 0
     .item-img 
@@ -287,6 +322,13 @@ section
         display: flex
         flex-direction: column
         z-index: -100
+        overflow: hidden
+        video
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
         
     .nav-white 
         background-color: #fff
@@ -339,12 +381,13 @@ section
             font-size: 64px
     .play 
         display: inline-block
-        position: relative
+        position: absolute
         font-family: Gilroy
         font-size: 16px
         line-height: 19px
         letter-spacing: 0.04em
         margin-top: 45px
+        top: 65%
         &::after
             position: absolute
             content: ''
@@ -392,7 +435,7 @@ section
 .visa
     padding: 68px 0
     background: #FCFCFC
-    margin-bottom: 8rem
+    margin-bottom: 70px
     &-row 
         display: flex
         justify-content: space-between
@@ -463,6 +506,7 @@ section
     position: relative
     .row-content
         margin-bottom: 5rem
+        margin-top: 0
     .item-text 
         display: flex
         flex-direction: column
@@ -738,6 +782,10 @@ section
             h3 
                 font-size: 20px
                 text-align: center
+        .scroll 
+            display: none
+        .play 
+            display: none
     .about 
         padding-top: 50px
     .know 
@@ -749,7 +797,6 @@ section
             height: 60px
         .header-content
             .title 
-                justify-content: flex-end
                 margin-bottom: 40px
             h1 
                 font-size: 20px 

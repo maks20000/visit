@@ -14,12 +14,19 @@
 <body>
     <div class="popup_form">
         <div class="form">
+            <div class="close"></div>
             <input type="text" placeholder="Ваше имя">
             <input type="text" placeholder="Ваш телефон">
             <a class="button" href="#">Заказать звонок</a>
         </div>
     </div>  
-    <div class="popup"></div> 
+    <div class="popup">
+            <div class="video">
+                <div class="close"></div>
+                <video src="video/GRADED_NESTED_FILM04.mp4" controls autoplay="false" >
+                </video>
+            </div>
+    </div> 
     <header class="header">
         <nav class="navbar">
             <div class ="hide-menu" target="nav-menu">
@@ -36,7 +43,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Календарь событий</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">ГАЛЕРЕЯ</a></li>
                 </ul>
-                <a href="#" class="button-tr call">ЗАКАЗАТЬ ЗВОНОК</a>
+                <button class="button-tr call">ЗАКАЗАТЬ ЗВОНОК</button>
             </div>
         </nav>
         <div class="header-slide">
@@ -47,9 +54,6 @@
                             <div class="title">
                                 <h3>ОТКРОЙТЕ ДЛЯ СЕБЯ</h3>
                                 <h1>САУДОВСКУЮ АРАВИЮ</h1>
-                                <div>
-                                    <span id="play" class="play">Смотреть видео</span>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -62,9 +66,6 @@
                             <div class="title">
                                 <h3>ОТКРОЙТЕ ДЛЯ СЕБЯ</h3>
                                 <h1>САУДОВСКУЮ АРАВИЮ</h1>
-                                <div>
-                                    <span id="play" class="play">Смотреть видео</span>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -72,6 +73,7 @@
             </div>
         </div>
         <div class="container">
+            <span id="play" class="play">Смотреть видео</span>
             <div class="controll">
                 <div id="header_back" class="back"></div>
                 <div id="header_next" class="next"></div>

@@ -63,22 +63,16 @@ $(document).ready(function(){
 
     $("#play").click(function() {
         var popap = $(".popup").show();
-        popap.html('<video src="video/GRADED_NESTED_FILM04.mp4" controls autoplay="false" ></video>');
         $("video").trigger('play');
     })
 
     $(".call").click(function () {
-        $(".popup_form").show()
+        $(".popup_form").show();
     })
 
-    $(".popup_form").click(function() {
-        $(this).hide();
-    })
-
-    $(".popup").click(function() {
+    $(".close").click(function() {
+        $(".popup_form, .popup").hide();
         $("video").trigger('pause');
-        $(this).html("");
-        $(this).hide();
     })
 
     if ($(window).scrollTop()>10) {
