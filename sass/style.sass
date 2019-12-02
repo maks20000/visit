@@ -12,6 +12,7 @@ $main-yellow: #EDAC40
     width: 25px
     height: 25px
     display: none
+    margin-bottom: 7px
     .line-up, .line-mid, .line-down
         position: absolute
         width: 100%
@@ -24,7 +25,15 @@ $main-yellow: #EDAC40
     .line-down 
         bottom: 2px
 
-
+.scroll 
+    width: 18px
+    height: 24px
+    position: absolute
+    bottom: 30px
+    left: 50%
+    background: url("../icons/scroll.svg") no-repeat center
+    background-size: contain
+    cursor: pointer
 .popup, .popup_form
     position: fixed
     display: none
@@ -54,6 +63,8 @@ $main-yellow: #EDAC40
         text-align: center
         margin: 10% auto
         border-radius: 5px
+        transition: all .5s ease-in
+        z-index: 1001
         input
             width: 100%
             height: 50px
@@ -103,6 +114,8 @@ a
     font-size: 16px
     line-height: 19px
     letter-spacing: 0.04em
+    position: absolute
+    bottom: 30px
     .back, .next
         width: 34px
         height: 34px
@@ -252,20 +265,34 @@ section
 
 .header
     position: relative
-    background:  rgba(0, 0, 0, 0.24)
     font-family: 'Gilroy'
-    background: url('../img/DSC6917.jpg') no-repeat center center
     background-size: cover
     color: #fff
-    padding-bottom: 120px
     height: 100vh
-    display: flex
-    flex-direction: column
 
+    &-slide 
+        height: 100%
+        z-index: -100
+
+    &-slide-item 
+        position: relative
+        height: 100vh
+        width: 100%
+    .image-bg 
+        position: absolute
+        background-size: cover
+        background-position: center
+        height: 100vh
+        width: 100%
+        display: flex
+        flex-direction: column
+        z-index: -100
+        
     .nav-white 
         background-color: #fff
         z-index: 50
         border-bottom: 2px #f1f1f1 solid !important
+        height: 3.5rem !important
         .navbar-brand 
             color: $main-yellow
         .nav 
@@ -277,6 +304,7 @@ section
         width: 100%
         height: 7rem
         flex-wrap: nowrap
+        transition: all .5s ease-in
         &-container 
             display: flex
             justify-content: center
@@ -356,6 +384,11 @@ section
                 font-weight: 500
                 color: $main-yellow
                 border-bottom: 3px solid $main-yellow
+    .about-slide 
+        display: none
+        .row 
+            margin-right: 0
+            margin-left: 0
 .visa
     padding: 68px 0
     background: #FCFCFC
@@ -440,6 +473,10 @@ section
         position: absolute
         bottom: 10%
         width: 100%
+    .slick-slide 
+        .row
+            margin-left: 0
+            margin-right: 0
 
 .know 
     height: 600px
@@ -605,6 +642,8 @@ section
         .navbar 
             z-index: 50
             background: #fff
+            height: 3.5rem
+            padding-bottom: 0
             &-brand 
                 color: $main-yellow
             .hide-menu 
@@ -633,11 +672,18 @@ section
                 display: none
             
 @media screen and ( max-width: 767px)
+
     .header 
         .header-content
             h1 
                 font-size: 50px
     section
+        padding-bottom: 5rem
+        .title-line 
+            margin-bottom: 33px
+        .row-content
+            margin-top: 4rem
+            margin-bottom: 1rem
         .row-content, .reverse
             .item-img 
                 order: 1
@@ -647,33 +693,53 @@ section
                 margin-left: 0px
                 margin-right: 0px
                 width: 100%
+    .visa 
+        margin-bottom: 4rem
     .about 
         .nav 
             flex-direction: column
+            display: none
             li 
                 a:hover 
                     border-bottom-color: transparent !important
             .active
                 border-bottom-color: transparent !important
+        .tab-content 
+            display: none
+        .about-slide 
+            display: block
+    .calendar 
+        .row-content 
+            margin-top: 0
     .know
         .item-text
             width: 100% !important
         .c-controll
             bottom: 40px
             right: 5%
+    .calendar 
+        .c-controll
+            bottom: 0
 
 @media screen and ( max-width: 420px)
     .header 
         height: 60vh
-        padding-bottom: 10px
+        padding-bottom: 15px
+        .image-bg 
+            height: 60vh
         .header-content
+            padding-top: 3.5rem
             .title 
-                justify-content: flex-end
+                justify-content: center
                 margin-bottom: 40px
             h1 
                 font-size: 40px
+                text-align: center
             h3 
                 font-size: 20px
+                text-align: center
+    .about 
+        padding-top: 50px
     .know 
         display: none
 

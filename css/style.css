@@ -15,6 +15,7 @@
   width: 25px;
   height: 25px;
   display: none;
+  margin-bottom: 7px;
 }
 
 .hide-menu .line-up, .hide-menu .line-mid, .hide-menu .line-down {
@@ -34,6 +35,17 @@
 
 .hide-menu .line-down {
   bottom: 2px;
+}
+
+.scroll {
+  width: 18px;
+  height: 24px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  background: url("../icons/scroll.svg") no-repeat center;
+  background-size: contain;
+  cursor: pointer;
 }
 
 .popup, .popup_form {
@@ -68,6 +80,9 @@
   text-align: center;
   margin: 10% auto;
   border-radius: 5px;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+  z-index: 1001;
 }
 
 .popup .form input, .popup_form .form input {
@@ -131,6 +146,8 @@ a:hover {
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.04em;
+  position: absolute;
+  bottom: 30px;
 }
 
 .controll .back, .controll .next {
@@ -349,13 +366,29 @@ section .reverse .item-text {
 
 .header {
   position: relative;
-  background: rgba(0, 0, 0, 0.24);
   font-family: 'Gilroy';
-  background: url("../img/DSC6917.jpg") no-repeat center center;
   background-size: cover;
   color: #fff;
-  padding-bottom: 120px;
   height: 100vh;
+}
+
+.header-slide {
+  height: 100%;
+  z-index: -100;
+}
+
+.header-slide-item {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.header .image-bg {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -363,12 +396,14 @@ section .reverse .item-text {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: -100;
 }
 
 .header .nav-white {
   background-color: #fff;
   z-index: 50;
   border-bottom: 2px #f1f1f1 solid !important;
+  height: 3.5rem !important;
 }
 
 .header .nav-white .navbar-brand {
@@ -386,6 +421,8 @@ section .reverse .item-text {
   height: 7rem;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
 }
 
 .header .navbar-container {
@@ -529,6 +566,15 @@ section .reverse .item-text {
   border-bottom: 3px solid #EDAC40;
 }
 
+.about .about-slide {
+  display: none;
+}
+
+.about .about-slide .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 .visa {
   padding: 68px 0;
   background: #FCFCFC;
@@ -668,6 +714,11 @@ section .reverse .item-text {
   position: absolute;
   bottom: 10%;
   width: 100%;
+}
+
+.calendar .slick-slide .row {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .know {
@@ -915,6 +966,8 @@ section .reverse .item-text {
   .header .navbar {
     z-index: 50;
     background: #fff;
+    height: 3.5rem;
+    padding-bottom: 0;
   }
   .header .navbar-brand {
     color: #EDAC40;
@@ -957,6 +1010,16 @@ section .reverse .item-text {
   .header .header-content h1 {
     font-size: 50px;
   }
+  section {
+    padding-bottom: 5rem;
+  }
+  section .title-line {
+    margin-bottom: 33px;
+  }
+  section .row-content {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+  }
   section .row-content .item-img, section .reverse .item-img {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -971,17 +1034,30 @@ section .reverse .item-text {
     margin-right: 0px;
     width: 100%;
   }
+  .visa {
+    margin-bottom: 4rem;
+  }
   .about .nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    display: none;
   }
   .about .nav li a:hover {
     border-bottom-color: transparent !important;
   }
   .about .nav .active {
     border-bottom-color: transparent !important;
+  }
+  .about .tab-content {
+    display: none;
+  }
+  .about .about-slide {
+    display: block;
+  }
+  .calendar .row-content {
+    margin-top: 0;
   }
   .know .item-text {
     width: 100% !important;
@@ -990,24 +1066,38 @@ section .reverse .item-text {
     bottom: 40px;
     right: 5%;
   }
+  .calendar .c-controll {
+    bottom: 0;
+  }
 }
 
 @media screen and (max-width: 420px) {
   .header {
     height: 60vh;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
+  }
+  .header .image-bg {
+    height: 60vh;
+  }
+  .header .header-content {
+    padding-top: 3.5rem;
   }
   .header .header-content .title {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-bottom: 40px;
   }
   .header .header-content h1 {
     font-size: 40px;
+    text-align: center;
   }
   .header .header-content h3 {
     font-size: 20px;
+    text-align: center;
+  }
+  .about {
+    padding-top: 50px;
   }
   .know {
     display: none;

@@ -28,6 +28,29 @@ $(document).ready(function(){
         ]
     });
 
+    var header_slide = $('.header-slide').slick({
+      prevArrow: $("#header_back"),
+      nextArrow: $("#header_next"),
+      speed: 1000,
+    });
+
+    var count = header_slide.slick("getSlick").slideCount;
+    console.log(count);
+    if (count<10) count = " / 0"+count;
+    else count = " / "+count;
+    $("#header-count").html(count);
+
+    header_slide.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        var header_num = $("#header-num");
+        var num = nextSlide+1;
+        if (num<10) num = "0"+num;
+        header_num.html(num);
+    });
+
+    $(".about-slide").slick({
+
+    });
+
     $('.know-slider-container').slick({
         prevArrow: $("#know_back"),
         nextArrow: $("#know_next")
